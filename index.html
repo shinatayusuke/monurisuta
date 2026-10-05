@@ -1,0 +1,110 @@
+html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モヌリスタ - 柴田裕輔 公式サイト</title>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif; line-height: 1.8; color: #333; background-color: #f5f6f8; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .main-content-area { padding: 40px 0; }
+        .section-title { font-size: 1.5rem; margin-bottom: 25px; color: #1a2a3a; border-left: 4px solid #bfa15f; padding-left: 12px; font-weight: bold; }
+        .header { background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 1.4rem; color: #1a2a3a; font-weight: bold; letter-spacing: 1px; }
+        .nav ul { display: flex; gap: 24px; }
+        .nav a { font-weight: 500; transition: color 0.3s; color: #555; }
+        .nav a:hover { color: #bfa15f; }
+        .hero { background: linear-gradient(135deg, #1a2a3a, #2c4259); color: #fff; height: 25vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero-content h2 { font-size: 2.2rem; margin-bottom: 10px; letter-spacing: 2px; }
+        .footer { background-color: #1a2a3a; color: #ccc; text-align: center; padding: 25px 0; margin-top: 60px; font-size: 0.9rem; }
+        .box1 { background: linear-gradient(135deg, #ffffff, #f0f4f8); padding: 50px 30px; border-radius: 8px; border: 2px solid #1a2a3a; margin-bottom: 35px; text-align: center; box-shadow: 0 6px 20px rgba(26, 42, 58, 0.05); }
+        .box-group { display: flex; gap: 25px; }
+        .left-column { flex: 0 0 calc(20% - 13px); display: flex; flex-direction: column; gap: 20px; }
+        .box2 { background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #1a2a3a; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .box-tsubo { background-color: #fff; padding: 20px; border-radius: 8px; border: 2px solid #1a2a3a; box-shadow: 0 4px 12px rgba(0,0,0,0.02); text-align: center; }
+        .box3 { flex: 1; background-color: #fff; padding: 35px; border-radius: 8px; border: 2px solid #1a2a3a; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .side-menu li { margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px dashed #eee; }
+        .side-menu a { color: #555; transition: all 0.3s; }
+        .side-menu a:hover { color: #bfa15f; padding-left: 5px; }
+        .profile-list dt { font-weight: bold; color: #1a2a3a; margin-top: 10px; }
+        .profile-list dd { margin-left: 0; color: #555; margin-bottom: 15px; }
+        .art-container { display: flex; justify-content: center; align-items: center; padding: 20px 0; background: radial-gradient(circle, #2c4259 0%, #1a2a3a 100%); border-radius: 6px; margin: 15px 0; overflow: hidden; position: relative; height: 180px; cursor: pointer; transition: transform 0.2s; }
+        .art-container:active { transform: scale(0.96); }
+        .art-bg-glow { position: absolute; width: 100px; height: 100px; background: #bfa15f; filter: blur(50px); opacity: 0.5; border-radius: 50%; }
+        .creative-vase { position: relative; width: 70px; height: 110px; background: linear-gradient(to right, #bfa15f, #dfd0b0, #9e8040); clip-path: polygon(30% 0%, 70% 0%, 75% 15%, 55% 20%, 95% 55%, 85% 85%, 65% 100%, 35% 100%, 15% 85%, 5% 55%, 45% 20%, 25% 15%); animation: floatVase 4s ease-in-out infinite; box-shadow: 0 5px 15px rgba(0,0,0,0.5); pointer-events: none; }
+        .creative-vase::after { content: ''; position: absolute; top: 0; left: 45%; width: 4px; height: 100%; background: linear-gradient(to bottom, #00c6ff, #007bff); opacity: 0.8; filter: drop-shadow(0 0 6px #00c6ff); }
+        @keyframes floatVase { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-8px) rotate(2deg); } 100% { transform: translateY(0px) rotate(0deg); } }
+        @media (max-width: 768px) { .box-group { flex-direction: column; } .left-column, .box3 { flex: none; width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top: 25px;">
+        <div class="box1">
+            <h3 style="color: #1a2a3a; font-size: 2rem; margin-bottom: 15px; letter-spacing: 3px;">MONURISTA</h3>
+            <p style="color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">モヌリスタの世界へようこそ。新しいひらめきと、自分らしい表現を大切にするスペース。</p>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">MONURISTA</h1>
+            <nav class="nav"><ul><li><a href="#about">About</a></li><li><a href="#concept">Concept</a></li></ul></nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Space</h2>
+            <p style="font-size: 1rem; color: #ddd; letter-spacing: 1px;">洗練されたデザインと、日々のクリエイティブ</p>
+        </div>
+    </section>
+    <main class="container main-content-area">
+        <div class="box-group">
+            <div class="left-column">
+                <div class="box2">
+                    <h4 style="margin-bottom: 15px; color: #1a2a3a; font-weight: bold;">Menu</h4>
+                    <ul class="side-menu">
+                        <li><a href="#">・ホーム</a></li>
+                        <li><a href="#about">・プロフィール</a></li>
+                        <li><a href="#concept">・コンセプト</a></li>
+                    </ul>
+                </div>
+                <div class="box-tsubo" id="tsubo">
+                    <h4 style="color: #1a2a3a; font-weight: bold; margin-bottom: 5px;">Tsubo</h4>
+                    <div class="art-container" onclick="playTsuboSound()">
+                        <div class="art-bg-glow"></div>
+                        <div class="creative-vase"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #666; line-height: 1.5; margin-bottom: 5px;">モヌリスタを象徴する独創的なアート。</p>
+                    <p style="font-size: 0.75rem; color: #bfa15f; font-weight: bold;">👇 壺を触ると不思議な音が響きます</p>
+                </div>
+            </div>
+            <div class="box3">
+                <h3 class="section-title" id="about">About Me</h3>
+                <p style="margin-bottom: 20px; font-weight: bold; font-size: 1.3rem; color: #1a2a3a;">柴田 裕輔 / Yusuke Shibata</p>
+                <dl class="profile-list">
+                    <dt>■ 生年月日</dt><dd>1993年12月30日生まれ</dd>
+                    <dt>■ 趣味</dt><dd>ハンドスピナー（指先で生み出す心地よい回転と、集中できる時間が魅力です）</dd>
+                    <dt>■ 特技</dt><dd>美肌つくり（日々のスキンケアや、清潔感のある健やかな肌を保つことにこだわっています）</dd>
+                </dl>
+                <p style="margin-top: 25px; color: #555;">モヌリスタのウェブサイトへお越しいただきありがとうございます。柴田裕輔です。この場所を通じて、自分の好きなことや、日々の新しい発見を発信していければと思っています。</p>
+                <h3 class="section-title" id="concept" style="margin-top: 40px;">Concept</h3>
+                <p style="color: #444;">「モヌリスタ」という言葉を軸に、シンプルながらもブレない軸を持った活動やアイデアの発信を行っています。左のBOXで静かに回り続けるハンドスピナー的安定感や、美しく整えられた肌のように、細部までこだわりが詰まった空間を目指しています。</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"><p>&copy; 2026 MONURISTA. All Rights Reserved.</p></footer>
+    <script>
+        const tsuboAudio = new Audio('https://mixkit.co');
+        tsuboAudio.volume = 0.3;
+        function playTsuboSound() {
+            tsuboAudio.currentTime = 0;
+            tsuboAudio.play().catch(function(error) { console.log(error); });
+        }
+    </script>
+</body>
+</html>
